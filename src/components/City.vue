@@ -19,7 +19,7 @@
             />
         </div>
         <div class="video">
-            <video autoplay loop muted>
+            <video autobuffer preload="auto" playsinline autoplay loop muted>
                 <source
                     :src="
                         require(`../../public/videos/${city.currentWeather.weather[0].icon}.mp4`)

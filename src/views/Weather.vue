@@ -1,10 +1,7 @@
 <template>
     <div class="wrap">
-        <div v-if="loading" class="loading">
-            <div class="lds-ripple">
-                <div></div>
-                <div></div>
-            </div>
+         <div v-if="loading" class="loading">
+            <span></span>
         </div>
         <div v-else class="weather" :class="{ day: isDay, night: isNight }">
             <div class="weather-wrap container">

@@ -1,10 +1,7 @@
 <template>
     <div class="main">
         <div v-if="isLoading" class="loading">
-            <div class="lds-ripple">
-                <div></div>
-                <div></div>
-            </div>
+            <span></span>
         </div>
         <div v-else class="app">
             <Modal
@@ -162,45 +159,68 @@
         margin: 0 auto;
         width: 100%;
     }
+    /* .loading {
+                        display: flex;
+                        height: 100vh;
+                        width: 100%;
+                        justify-content: center;
+                        align-items: center;
+                    }
+                    .lds-ripple {
+                        display: inline-block;
+                        position: relative;
+                        width: 80px;
+                        height: 80px;
+                    }
+                    .lds-ripple div {
+                        position: absolute;
+                        border-width: 4px;
+                        border-style: solid;
+                        border-color: rgb(59, 150, 249);
+                        opacity: 1;
+                        border-radius: 50%;
+                        animation: lds-ripple 1s cubic-bezier(0, 0.2, 0.8, 1) infinite;
+                    }
+                    .lds-ripple div:nth-child(2) {
+                        animation-delay: -0.5s;
+                    }
+                    @keyframes lds-ripple {
+                        0% {
+                            top: 36px;
+                            left: 36px;
+                            width: 0;
+                            height: 0;
+                            opacity: 1;
+                        }
+                        100% {
+                            top: 0px;
+                            left: 0px;
+                            width: 72px;
+                            height: 72px;
+                            opacity: 0;
+                        }
+                    } */
     .loading {
+        @keyframes spin {
+            to {
+                transform: rotateZ(360deg);
+            }
+        }
         display: flex;
         height: 100vh;
         width: 100%;
         justify-content: center;
         align-items: center;
-    }
-    .lds-ripple {
-        display: inline-block;
-        position: relative;
-        width: 80px;
-        height: 80px;
-    }
-    .lds-ripple div {
-        position: absolute;
-        border-width: 4px;
-        border-style: solid;
-        border-color: rgb(59, 150, 249);
-        opacity: 1;
-        border-radius: 50%;
-        animation: lds-ripple 1s cubic-bezier(0, 0.2, 0.8, 1) infinite;
-    }
-    .lds-ripple div:nth-child(2) {
-        animation-delay: -0.5s;
-    }
-    @keyframes lds-ripple {
-        0% {
-            top: 36px;
-            left: 36px;
-            width: 0;
-            height: 0;
-            opacity: 1;
-        }
-        100% {
-            top: 0px;
-            left: 0px;
-            width: 72px;
-            height: 72px;
-            opacity: 0;
+
+        span {
+            display: block;
+            width: 60px;
+            height: 60px;
+            margin: 0 auto;
+            border: 2px solid transparent;
+            border-top-color: #142a5f;
+            border-radius: 50%;
+            animation: spin ease 1000ms infinite;
         }
     }
 </style>
