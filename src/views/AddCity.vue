@@ -1,6 +1,6 @@
 <template>
     <div>
-        <div v-if="cities.length === 0" class="no-cities container">
+        <div v-if="cities.length === 0" class="no-cities">
             <p>Hiçbir yer eklenmedi. Yeni bir yer eklemek ister misin?</p>
             <button @click="addCity">Add City</button>
         </div>
@@ -31,6 +31,7 @@
     .no-cities {
         position: absolute;
         min-height: 100vh;
+        width: 100%;
         display: flex;
         flex-direction: column;
         justify-content: center;
