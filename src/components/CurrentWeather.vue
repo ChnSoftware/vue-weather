@@ -40,11 +40,11 @@
     export default {
         name: "CurrentWeather",
         props: ["currentWeather", "isDay", "isNight"],
-    computed: {
-        cityName() {
-            return this.currentWeather.name.split(" ")[1] == "Province" ? this.currentWeather.name.split(" ")[0] : this.currentWeather.name
+        computed: {
+            cityName() {
+                return this.currentWeather.name.split(" ")[1] == "Province" ? this.currentWeather.name.split(" ")[0] : this.currentWeather.name
+            }
         }
-    }
     }
 </script>
 
