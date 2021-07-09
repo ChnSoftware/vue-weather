@@ -1,4 +1,5 @@
 # vue-weather
+See [Site](https://chn-vue-weather.netlify.app)
 
 ## Project setup
 ```
